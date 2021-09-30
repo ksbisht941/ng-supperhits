@@ -1,0 +1,54 @@
+<div class="masthead-area">
+  <div class="masthead">
+    <div class="masthead-overlay left"></div>
+    <div>
+      <div class="masthead-container">
+        <ngx-slick-carousel
+          class="carousel"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          <div ngxSlickItem *ngFor="let content of mastheadContent" class="slide">
+            <div class="masthead-item-container">
+              <div role="presentation">
+                <div tabindex target href="#">
+                  <div class="masthead-card">
+                    <div class="image-holder">
+                      <div class="imageloader loaded">
+                        <img
+                          src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1_5x/{{content.images.h}}"
+                          alt="Maestro"
+                          class=""
+                        />
+                      </div>
+                    </div>
+
+                    <div class="image-gradient"></div>
+
+                    <div class="masthead-data">
+                      <div class="container"></div>
+                      <div class="masthead-badge"></div>
+                      <div class="slider-caption non-subs-caption">
+                        <div class="container">
+                          <div class="content-holder">
+                            <div class="title ellipsize">{{content.title}}</div>
+                            <div class="toptitle">
+                              <span class="meta-data" *ngFor="let genre of content.genre">{{genre}} </span>
+                            </div>
+                            <div class="description">
+                              {{content.description}}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</div>
